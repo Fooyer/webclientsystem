@@ -1,2 +1,2 @@
 # WebClientSystem
-Cliente System WEB Project using react and Supabase
+Cliente System WEB Project using Supabase
