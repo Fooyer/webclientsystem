@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: rgb(131, 131, 255);
+
+}
+
+header{
+    
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(10, 10, 112);
+    box-shadow: 0px 0px 15px black;
+
+}
