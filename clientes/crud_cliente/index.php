@@ -13,8 +13,7 @@ class crudCliente {
     }
 
     private function loadPage(){
-
-        include "../../components/header/header.html";
+        
         include "index.html";
 
     }
