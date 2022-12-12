@@ -18,3 +18,27 @@ header{
     box-shadow: 0px 0px 15px black;
 
 }
+
+.mainOption{
+
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    margin-left: 100px;
+    display: block;
+    position: relative;
+
+}
+
+.mainOption:hover{
+
+    color: yellow;
+
+}
+
+.mainMenu{
+
+    padding-top: 4vh;
+    display: flex;
+
+}

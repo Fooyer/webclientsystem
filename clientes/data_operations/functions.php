@@ -2,7 +2,7 @@
 
 # Chama todas as informações de todos os clientes
 
-public function obterClientes(){
+function obterClientes(){
 
     $curl = curl_init("https://rtumliswsljprclempsj.supabase.co/rest/v1/usuarios?select=*");
             
@@ -16,7 +16,7 @@ public function obterClientes(){
 
     $array = curl_exec($curl);
 
-    return $array
+    return $array;
 
 }
 

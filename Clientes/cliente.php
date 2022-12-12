@@ -1,6 +1,6 @@
 <?php
 
-# Criação da classe para o objeto cliente
+# Criação da classe para o objeto cliente, todas as operações com clientes devem herdar dessa classe
 
 class cliente{
 
@@ -14,7 +14,6 @@ class cliente{
         $this->nome = $nome;
         $this->email = $email;
 
-        return TRUE;
     }
 
     public function setNome($nome) {
