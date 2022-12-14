@@ -1,14 +1,14 @@
 <?php
 
-include "clientes/data_operations/functions.php"
+include "clientes/data_operations/functions.php";
 
 class menu {
 
-    private $dados
+    public $dados = NULL;
 
     function __construct($request){
 
-        $this->dados = $request
+        $this->dados = $request;
 
         $sc = $this->loadPage();
         if ($sc==FALSE) {exit("<script> alert('Houve um erro ao carregar a página.') </script>");}
@@ -17,7 +17,7 @@ class menu {
 
     public function loadPage(){
         
-        $dados=$this->dados
+        $dados=$this->dados;
 
         include "index.html";
         
@@ -27,7 +27,7 @@ class menu {
 
 }
 
-$request = obterClientes()
+$request = obterClientes();
 new menu($request);
 
 ?>
