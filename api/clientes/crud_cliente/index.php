@@ -14,7 +14,7 @@ class crudCliente {
 
     private function loadPage(){
         
-        include "index.html";
+        include "tela.html";
 
     }
 }
