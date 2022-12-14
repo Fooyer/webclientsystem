@@ -27,6 +27,7 @@ class menu {
 
 }
 
-echo "Aoba"; print_r(obterClientes()); echo "--------------------"
+$request=obterClientes();
+new menu($request);
 
 ?>
