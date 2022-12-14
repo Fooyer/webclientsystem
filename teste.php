@@ -6,40 +6,28 @@ http_response_code(200);
 // set the response header to JSON
 header('Content-Type: application/json');
 
-$headers = getallheaders();
+//$headers = getallheaders();
 
-// Check if the "API-Key" header is present in the request
-if (isset($headers['API-Key'])) {
-  // Get the value of the "API-Key" header
-  $apiKey = $headers['API-Key'];
+// Obtenha a chave API enviada
+$apikey = get_apikey();
 
-  // Validate the value of the "API-Key" header
-  if ($apiKey=="123") {
-    // The "API-Key" header is valid, so continue processing the request
-
-    // create the data for the response
-    $data = [
-      'id' => 2,
-      'name' => 'John Doe',
-      'email' => 'john.doe@example.com'
-    ];
-
-    // encode the data as JSON and output it
-    echo json_encode($data);
-
-  } else {
-    // The "API-Key" header is not valid, so return an error
-
-    http_response_code(400);
-
-    echo "Error"
-
-  }
-} else {
-  // The "API-Key" header is not present, so return an error
-
-  http_response_code(400);
-
-  echo "Api-Key is necessary"
-
+// Verifique se a chave API é válida
+if ($apikey!="123") {
+  // A chave API não é válida
+  // Envie uma resposta de erro com o código de status HTTP 401 (Não autorizado)
+  http_response_code(401);
+  echo json_encode(array("message" => "A chave API é inválida."));
+  exit;
 }
+
+// A chave API é válida
+// Obtenha os parâmetros de consulta
+$data = [
+  'id' => 2,
+  'name' => 'John Doe',
+  'email' => 'john.doe@example.com'
+];
+
+// encode the data as JSON and output it
+echo json_encode($data);
+// Verifique se houve resultados
