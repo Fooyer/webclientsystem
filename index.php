@@ -27,7 +27,6 @@ class menu {
 
 }
 
-print_r(obterClientes());
-
+echo "Aoba"; print_r(obterClientes()); echo "--------------------"
 
 ?>
