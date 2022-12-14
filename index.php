@@ -27,7 +27,7 @@ class menu {
 
 }
 
-$request = obterClientes();
-//new menu($request);
+obterClientes();
+
 
 ?>
