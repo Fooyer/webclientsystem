@@ -17,6 +17,21 @@ if (isset($headers['API-Key'])) {
   if (validateApiKey($apiKey)) {
     // The "API-Key" header is valid, so continue processing the request
 
+    $curl = curl_init("https://rtumliswsljprclempsj.supabase.co/rest/v1/usuarios?select=*");
+            
+    curl_setopt(
+            $curl,
+            CURLOPT_HTTPHEADER,
+            array(
+                "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0dW1saXN3c2xqcHJjbGVtcHNqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzA1MjAzNzQsImV4cCI6MTk4NjA5NjM3NH0.oUeKoXYB0Av7B39RlqUSlxHyWFkabljfy0190PkA-eY",
+            )
+        );
+
+    $array = curl_exec($curl);
+
+    // encode the data as JSON and output it
+    echo json_encode($array);
+
   } else {
     // The "API-Key" header is not valid, so return an error
 
@@ -25,13 +40,3 @@ if (isset($headers['API-Key'])) {
   // The "API-Key" header is not present, so return an error
 
 }
-
-// create the data for the response
-$data = [
-  'id' => 2,
-  'name' => 'John Doe',
-  'email' => 'john.doe@example.com'
-];
-
-// encode the data as JSON and output it
-echo json_encode($data);
