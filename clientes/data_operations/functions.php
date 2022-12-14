@@ -14,9 +14,9 @@ function obterClientes(){
             )
         );
 
-    curl_exec($curl);
+    $array = curl_exec($curl);
 
-    //return $array;
+    return $array;
 
 }
 
