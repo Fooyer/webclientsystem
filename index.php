@@ -27,7 +27,7 @@ class menu {
 
 }
 
-obterClientes();
+print_r(obterClientes());
 
 
 ?>

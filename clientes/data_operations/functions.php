@@ -16,7 +16,7 @@ function obterClientes(){
 
     $array = curl_exec($curl);
 
-    echo $array;
+    return $array;
 
 }
 
