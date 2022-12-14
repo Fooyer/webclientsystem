@@ -35,8 +35,16 @@ if (isset($headers['API-Key'])) {
   } else {
     // The "API-Key" header is not valid, so return an error
 
+    http_response_code(400);
+
+    echo "Error"
+
   }
 } else {
   // The "API-Key" header is not present, so return an error
+
+  http_response_code(400);
+
+  echo "Api-Key is necessary"
 
 }
