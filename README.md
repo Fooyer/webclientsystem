@@ -1,3 +1,3 @@
 # WebClientSystem
 
-Cliente System WEB Project using Supabase
+Cliente System WEB Project
