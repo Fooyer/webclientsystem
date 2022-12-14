@@ -28,6 +28,6 @@ class menu {
 }
 
 $request = obterClientes();
-new menu($request);
+//new menu($request);
 
 ?>
