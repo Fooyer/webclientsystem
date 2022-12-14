@@ -12,7 +12,7 @@ class menu {
 
     public function loadPage(){
         
-        include "index.html";
+        include "tela.html";
         
         return TRUE;
     
