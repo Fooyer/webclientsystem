@@ -1,6 +1,6 @@
 <?php
 
-include "./clientes/data_operations/functions.php"
+include "clientes/data_operations/functions.php"
 
 class menu {
 
