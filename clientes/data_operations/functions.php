@@ -23,10 +23,7 @@ function obterClientes(){
 
     $apiData = json_decode($file_contents);
 
-    print_r($apiData);
-
-
-    //return $array;
+    return $apiData;
 
 }
 
