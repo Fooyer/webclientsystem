@@ -33,7 +33,7 @@ foreach ($response as $propriedade => $valor) {
        
     foreach ($valor as $propriedade2 => $valor2) {
        
-        echo "$propriedade2 : $valor2\n";
+        echo "$propriedade2 : $valor2 <br>";
 
     };
 
