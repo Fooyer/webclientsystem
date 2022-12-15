@@ -29,6 +29,18 @@ class menu {
 
 $response = obterClientes();
 
+// Definimos uma função de comparação que ordena os objetos pelo ID
+function compareById($a, $b) {
+  if ($a->id == $b->id) {
+    return 0;
+  }
+  return ($a->id < $b->id) ? -1 : 1;
+}
+
+// Usamos a função usort() para ordenar o array de objetos
+usort($response, 'compareById');
+
+
 foreach ($response as $propriedade => $valor) {
        
     foreach ($valor as $propriedade2 => $valor2) {
