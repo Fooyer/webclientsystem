@@ -29,6 +29,6 @@ class menu {
 
 $response = obterClientes();
 
-print_r($response);
+var_dump($response);
 
 ?>
