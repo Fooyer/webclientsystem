@@ -14,11 +14,11 @@ function obterClientes(){
             )
         );
 
-    $array = curl_exec($curl);
+    //$array = curl_exec($curl);
 
-    curl_close($curl);
+    //curl_close($curl);
 
-    return $array;
+    //return $array;
 
 }
 
