@@ -16,7 +16,7 @@ public function obterClientes(){
 
     $array = curl_exec($curl);
     
-    var_dump($array);
+
 
     return $array;
 
