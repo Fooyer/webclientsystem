@@ -29,4 +29,6 @@ class menu {
 
 $response = obterClientes();
 
+print_r($response);
+
 ?>
