@@ -42,3 +42,23 @@ header{
     display: flex;
 
 }
+
+.tabelaCliente,th,td{
+
+    border: 1px solid black;
+    border-spacing: inherit;
+
+}
+
+.tabelaCliente td{
+
+    font-size: medium;
+    padding: 5px 5px 5px 5px;
+
+}
+
+.tabelaCliente th{
+
+    padding: 5px 5px 5px 5px;
+
+}

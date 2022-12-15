@@ -1,6 +1,13 @@
 <?php
 
-# Chama todas as informações de todos os clientes
+# Chama todas as informações de todos os clientes e coloca em ordem de ID
+
+function compareById($a, $b) {
+    if ($a->id == $b->id) {
+      return 0;
+    }
+    return ($a->id < $b->id) ? -1 : 1;
+}
 
 function obterClientes(){
 
@@ -23,8 +30,8 @@ function obterClientes(){
 
     $apiData = json_decode($file_contents);
 
+    usort($apiData, 'compareById');
+
     return $apiData;
 
 }
-
-?>

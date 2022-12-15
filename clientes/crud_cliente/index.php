@@ -1,25 +1,31 @@
 <?php
 
-include_once "../cliente.php";
+include_once("../data_operations/functions.php");
+#include "../cliente.php";
 
 class crudCliente {
-    
 
+    private $response = null;
 
-    function __construct(){
+    function __construct($response){
 
+        $this->response = $response;
         $this->loadPage();
 
     }
 
     private function loadPage(){
-        
+
+        $dados = $this->response;
+
         include "index.html";
 
     }
 }
 
-new crudCliente();
+$response = obterClientes();
+
+new crudCliente($response);
 
 
 ?>
