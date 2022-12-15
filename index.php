@@ -28,7 +28,13 @@ class menu {
 }
 
 $response = obterClientes();
-var_dump($response);
+//var_dump($response);
+
+foreach ($response as $propriedade => $valor) {
+       
+    echo "$propriedade: $valor\n";
+
+}
 
 //new menu($response);
 
