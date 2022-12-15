@@ -32,7 +32,7 @@ $response = obterClientes();
 
 foreach ($response as $propriedade => $valor) {
        
-    echo "$propriedade: $valor\n";
+    print_r("$propriedade: $valor\n");
 
 }
 
