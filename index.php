@@ -31,7 +31,11 @@ $response = obterClientes();
 
 foreach ($response as $propriedade => $valor) {
        
-    var_dump("$propriedade: $valor\n");
+    foreach ($valor as $propriedade2 => $valor2) {
+       
+        echo "$propriedade2 : $valor2\n";
+
+    };
 
 };
 
