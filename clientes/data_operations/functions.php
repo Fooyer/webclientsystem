@@ -14,7 +14,7 @@ function obterClientes(){
            )
         );
 
-    $array = file_get_contents($curl);
+    $array = file_get_contents("https://rtumliswsljprclempsj.supabase.co/rest/v1/usuarios?select=*");
     $apiData = json_decode($apiResponse);
 
     var_dump($array);
