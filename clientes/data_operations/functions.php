@@ -14,9 +14,10 @@ function obterClientes(){
             )
         );
 
-    $array = curl_exec($curl);
+    $array = file_get_contents($curl);
+    $apiData = json_decode($apiResponse);
 
-    //curl_close($curl);
+    var_dump($apiData);
 
     //return $array;
 
