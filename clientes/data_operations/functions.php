@@ -1,17 +1,10 @@
 <?php
 
-# Chama todas as informações de todos os clientes e coloca em ordem de ID
-
-function compareById($a, $b) {
-    if ($a->id == $b->id) {
-      return 0;
-    }
-    return ($a->id < $b->id) ? -1 : 1;
-}
+# Chama todas as informações de todos os clientes ordenados pelo ID
 
 function obterClientes(){
 
-    $curl = curl_init("https://rtumliswsljprclempsj.supabase.co/rest/v1/usuarios?select=*");
+    $curl = curl_init("https://rtumliswsljprclempsj.supabase.co/rest/v1/rpc/OrderbyID");
             
     curl_setopt(
             $curl,
@@ -29,8 +22,6 @@ function obterClientes(){
     ob_end_clean();
 
     $apiData = json_decode($file_contents);
-
-    usort($apiData, 'compareById');
 
     return $apiData;
 
