@@ -36,7 +36,7 @@
 
         <?php foreach ($dados as $propriedade => $valor) { ?>
 
-            <tr id="linhaTabela" onclick="teste(Event)">
+            <tr id="linhaTabela" onclick="teste(event)">
 
                 <?php foreach ($valor as $propriedade2 => $valor2) { ?>
 
@@ -61,7 +61,7 @@
 
     function teste(event){
 
-        console.log(event.target);
+        console.log(event);
 
     }
 
