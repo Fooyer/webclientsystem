@@ -74,3 +74,9 @@ header{
     background-color: white !important;
 
 }
+
+#linhaTabela:active{
+
+    background-color: yellow;
+
+}
