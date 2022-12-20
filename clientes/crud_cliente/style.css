@@ -62,3 +62,9 @@ header{
     padding: 5px 5px 5px 5px;
 
 }
+
+.linhaTabela:hover{
+
+    background-color: white;
+
+}
