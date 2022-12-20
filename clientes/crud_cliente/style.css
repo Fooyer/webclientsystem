@@ -74,9 +74,3 @@ header{
     background-color: white;
 
 }
-
-#linhaTabela:target{
-
-    background-color: yellow !important;
-
-}

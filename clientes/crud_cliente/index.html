@@ -59,6 +59,9 @@
 
 <script>
 
+    let flagSelec=0
+    let eventoAnt=0
+
     function teste(event){
 
         var tds = event.path[1].getElementsByTagName("td");
@@ -68,7 +71,25 @@
             var td = tds[i];
             console.log(td.textContent.trim());
 
-         }
+        }
+
+
+        if (flagSelec==0){
+
+            event.path[1].style.background = "yellow";
+
+            flagSelec = 1
+            eventoAnt = event
+
+        }
+        else{
+
+            eventoAnt.path[1].style.background = "none";
+            flagSelec = 1
+            
+            event.path[1].style.background = "yellow";
+
+        }
 
     }
 
