@@ -84,7 +84,15 @@
         }
         else{
 
-            eventoAnt.path[1].style.background = "none";
+            tds = eventoAnt.path[1].getElementsByTagName("td");
+
+            for (var i = 0; i < tds.length; i++) {
+
+                var td = tds[i];
+                td.style.background = "none";
+
+            }
+
             flagSelec = 1
             
             event.path[1].style.background = "yellow";
