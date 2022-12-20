@@ -75,7 +75,7 @@ header{
 
 }
 
-#linhaTabela:focus{
+#linhaTabela:target{
 
     background-color: yellow !important;
 
