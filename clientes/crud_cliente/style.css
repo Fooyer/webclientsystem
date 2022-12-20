@@ -71,12 +71,12 @@ header{
 
 #linhaTabela:hover{
 
-    background-color: white !important;
+    background-color: white;
 
 }
 
 #linhaTabela:active{
 
-    background-color: yellow;
+    background-color: yellow !important;
 
 }
