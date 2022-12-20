@@ -61,7 +61,13 @@
 
     function teste(event){
 
-        console.log(event.path[1].getElementsByTagName("td"));
+        var tds = event.path[1].getElementsByTagName("td");
+
+        tds.forEach(element => {
+
+            console.log(element.value);
+
+        });
 
     }
 
