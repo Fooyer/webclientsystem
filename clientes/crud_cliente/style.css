@@ -63,6 +63,12 @@ header{
 
 }
 
+#linhaTabela{
+
+    cursor: none;
+
+}
+
 #linhaTabela:hover{
 
     background-color: white !important;
