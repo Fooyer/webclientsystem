@@ -96,8 +96,9 @@ header{
 
 #clienteID{
 
-    width: 5vw;
-    height: 5vw;
+    width: 3vw;
+    height: 3vw;
     float: left;
+    margin: 1vw 3vh;
 
 }
