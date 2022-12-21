@@ -89,6 +89,13 @@ header{
 
 }
 
+.formularioCliente input{
+
+    border: 1px solid black;
+    box-shadow: 0px 0px 3px black;
+
+}
+
 #caixaFormulario{
 
     width: 100vw;
