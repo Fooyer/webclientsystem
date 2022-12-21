@@ -99,7 +99,6 @@ header{
     width: 3vw;
     height: 3vw;
     float: left;
-
     margin-left: 2vw;
     border-radius: 5px;
     border: 1px solid black;
@@ -113,5 +112,13 @@ header{
     margin-top: 2vh;
     margin-left: 2vw;
     float: left;
+
+}
+
+#campoID{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
 }
