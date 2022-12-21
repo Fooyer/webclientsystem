@@ -38,7 +38,6 @@ header{
 
 .mainMenu{
 
-    padding-top: 4vh;
     display: flex;
     list-style: none;
     justify-content: space-around;
