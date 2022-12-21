@@ -159,3 +159,10 @@ header{
     flex-direction: column;
 
 }
+
+#cambut button{
+
+    height: 2vh;
+    width: 5vw;
+
+}
