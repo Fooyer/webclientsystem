@@ -153,9 +153,9 @@ header{
 #cambut{
 
     height: 100%;
-    width: 40vw;
+    width: 39vw;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
 
 }
