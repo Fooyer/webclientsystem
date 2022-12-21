@@ -71,6 +71,6 @@ header{
 
 #linhaTabela:hover{
 
-    background: white;
+    background: white !important;
 
 }
