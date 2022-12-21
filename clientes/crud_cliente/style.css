@@ -132,6 +132,7 @@ header{
 
 #camposDados{
 
+    margin-top: 10px;
     width: 40vw;
     height: 70%;
     display: flex;
