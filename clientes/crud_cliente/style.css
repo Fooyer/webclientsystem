@@ -171,13 +171,13 @@ header{
 
     margin-right: 10px;
     border: 1px solid black;
-    color: greenyellow;
+    background-color: greenyellow;
 
 }
 
 #botaoCancelar{
 
     border: 1px solid black;
-    color: rgb(241, 40, 40);
+    background-color: rgb(241, 40, 40);
 
 }
