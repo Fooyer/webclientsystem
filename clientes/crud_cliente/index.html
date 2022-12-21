@@ -100,11 +100,13 @@
     function teste(event){
 
         var tds = event.path[1].getElementsByTagName("td");
+        var inputs = document.getElementsByClassName("formularioCliente");
+        console.log(inputs)
 
         for (var i = 0; i < tds.length; i++) {
 
             var td = tds[i];
-            console.log(td.textContent.trim());
+            var conteudo =td.textContent.trim();
 
         }
 
