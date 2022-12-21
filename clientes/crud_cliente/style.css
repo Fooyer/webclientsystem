@@ -83,7 +83,6 @@ header{
     width: 40vw;
     height: 15vh;
     background-color: aquamarine;
-    padding-top: 5vh;
 
 }
 
@@ -93,5 +92,6 @@ header{
     height: 20vh;
     display: flex;
     justify-content: center;
+    padding-top: 8vh;
 
 }
