@@ -100,7 +100,7 @@
     function teste(event){
 
         var tds = event.path[1].getElementsByTagName("td");
-        var inputs = document.getElementsByClassName("formularioCliente");
+        var inputs = document.getElementsByClassName("formularioCliente")[0].getElementsByTagName("input");
         console.log(inputs)
 
         for (var i = 0; i < tds.length; i++) {
