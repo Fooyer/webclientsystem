@@ -81,3 +81,11 @@ header{
     justify-content: center;
 
 }
+
+#caixaFormulario{
+
+    width: 50vw;
+    height: 20vh;
+    align-items: center;
+
+}

@@ -27,7 +27,7 @@
     
     </header>
 
-    <div>
+    <div id="caixaFormulario">
         <form action="" class="formularioCliente">
 
             <label for="">ID</label>
@@ -42,8 +42,8 @@
             <label for="">Telefone</label>
             <input type="tel" name="Telefone" id="">
 
-            <button type="submit">Salvar</button>
-            <button type="reset" onclick="cancelar()">Cancelar</button>
+            <button type="submit" onclick="reset()">Salvar</button>
+            <button type="reset" onclick="reset()">Cancelar</button>
 
         </form>
     </div>
@@ -115,7 +115,7 @@
 
     }
 
-    function cancelar() {
+    function reset() {
 
         eventoAnt.path[1].style.background = "none";
        
