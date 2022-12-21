@@ -80,13 +80,17 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40vw;
+    height: 15vh;
+    background-color: aquamarine;
 
 }
 
 #caixaFormulario{
 
-    width: 50vw;
+    width: 100vw;
     height: 20vh;
-    align-self: center;
+    display: flex;
+    justify-content: center;
 
 }
