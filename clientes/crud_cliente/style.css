@@ -77,9 +77,6 @@ header{
 
 .formularioCliente{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 70vw;
     height: 15vh;
     background-color: rgb(98, 98, 231);
@@ -94,5 +91,13 @@ header{
     display: flex;
     justify-content: center;
     margin-top: 8vh;
+
+}
+
+#clienteID{
+
+    width: 2vw;
+    height: 2vh;
+    float: left;
 
 }
