@@ -146,16 +146,16 @@ header{
     height: 30%;
     width: 40vw;
     display: flex;
-    justify-content: center;
+    justify-content: end;
 
 }
 
 #cambut{
 
     height: 100%;
-    width: 39vw;
+    width: 40vw;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
 
 }
