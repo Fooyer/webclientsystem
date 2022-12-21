@@ -110,7 +110,7 @@ header{
 #campoID{
 
     height: 100%;
-    width: 5vw;
+    width: 8vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
