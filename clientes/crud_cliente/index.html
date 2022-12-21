@@ -27,6 +27,27 @@
     
     </header>
 
+    <div>
+        <form action="" class="formularioCliente">
+
+            <label for="">ID</label>
+            <input type="text" readonly name="ID" id="">
+
+            <label for="">Nome</label>
+            <input type="text" name="Nome" id="">
+
+            <label for="">Email</label>
+            <input type="email" name="Email" id="">
+
+            <label for="">Telefone</label>
+            <input type="tel" name="Telefone" id="">
+
+            <button type="submit">Salvar</button>
+            <button type="reset" onclick="cancelar()">Cancelar</button>
+
+        </form>
+    </div>
+
     <table class="tabelaCliente">
 
         <th>ID</th>
@@ -59,8 +80,8 @@
 
 <script>
 
-    let flagSelec=0
-    let eventoAnt=0
+    let flagSelec = 0
+    let eventoAnt = 0
 
     function teste(event){
 
@@ -74,7 +95,7 @@
         }
 
 
-        if (flagSelec==0){
+        if (flagSelec == 0){
 
             event.path[1].style.background = "yellow";
 
@@ -91,6 +112,15 @@
             event.path[1].style.background = "yellow";
 
         }
+
+    }
+
+    function cancelar() {
+
+        eventoAnt.path[1].style.background = "none";
+       
+        flagSelec = 0
+        eventoAnt = 0
 
     }
 

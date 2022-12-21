@@ -53,13 +53,13 @@ header{
 .tabelaCliente td{
 
     font-size: medium;
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
 
 }
 
 .tabelaCliente th{
 
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
 
 }
 
@@ -72,5 +72,12 @@ header{
 #linhaTabela:hover{
 
     background: white !important;
+
+}
+
+.formularioCliente{
+
+    display: flex;
+    justify-content: center;
 
 }
