@@ -80,7 +80,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40vw;
+    width: 70vw;
     height: 15vh;
     background-color: aquamarine;
 
@@ -92,6 +92,6 @@ header{
     height: 20vh;
     display: flex;
     justify-content: center;
-    padding-top: 8vh;
+    margin-top: 8vh;
 
 }
