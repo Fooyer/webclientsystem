@@ -79,6 +79,7 @@ header{
 
     display: flex;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -86,6 +87,6 @@ header{
 
     width: 50vw;
     height: 20vh;
-    align-items: center;
+    align-self: center;
 
 }
