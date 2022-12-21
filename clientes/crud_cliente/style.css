@@ -132,7 +132,7 @@ header{
 #camposDados{
 
     width: 40vw;
-    height: 50%;
+    height: 70%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -141,7 +141,7 @@ header{
 
 #buttons{
 
-    height: 50%;
+    height: 30%;
     width: 40vw;
 
 }
