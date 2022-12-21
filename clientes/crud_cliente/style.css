@@ -170,5 +170,14 @@ header{
 #botaoSalvar{
 
     margin-right: 10px;
+    border: 1px solid black;
+    color: greenyellow;
+
+}
+
+#botaoCancelar{
+
+    border: 1px solid black;
+    color: rgb(241, 40, 40);
 
 }
