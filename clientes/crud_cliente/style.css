@@ -169,6 +169,7 @@ header{
 
 #botaoSalvar{
 
+    color: white;
     margin-right: 10px;
     border: 1px solid black;
     background-color: #1e7015;
@@ -177,6 +178,7 @@ header{
 
 #botaoCancelar{
 
+    color: white;
     border: 1px solid black;
     background-color: #cd1709;
 
