@@ -99,6 +99,7 @@ header{
     width: 3vw;
     height: 3vw;
     float: left;
-    margin: 1vw 3vh;
+    margin: 1vw 8vh;
+    border-radius: 15px;
 
 }
