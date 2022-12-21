@@ -148,6 +148,12 @@ header{
 
 }
 
+#camposDados input{
+
+    padding: 2px;
+
+}
+
 #buttons{
 
     height: 30%;
