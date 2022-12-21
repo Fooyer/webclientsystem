@@ -101,5 +101,6 @@ header{
     float: left;
     margin: 5vh 2vw;
     border-radius: 5px;
+    border: 1px solid black;
 
 }
