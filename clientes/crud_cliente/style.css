@@ -162,7 +162,13 @@ header{
 
 #cambut button{
 
-    height: 2vh;
+    height: 4vh;
     width: 5vw;
+
+}
+
+#botaoSalvar{
+
+    margin-left: 10px;
 
 }
