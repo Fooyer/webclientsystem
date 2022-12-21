@@ -182,7 +182,7 @@ header{
 
     color: white;
     border: 1px solid black;
-    background-color: #cd1709;
+    background-color: #a51106;
     transition-duration: .2s;
 
 }
@@ -195,6 +195,6 @@ header{
 
 #botaoCancelar:hover{
 
-    background-color: #e2271a;
+    background-color: #cc1b0f;
 
 }
