@@ -6,7 +6,11 @@ class salvarCliente{
 
     function __construct($id,$nome,$email,$telefone){
 
-        $this->adicionaCliente($nome,$email,$telefone);
+        if ($id==""){
+
+            $this->adicionaCliente($nome,$email,$telefone);
+
+        }
 
         header("Location: ./../crud_cliente/");
 
