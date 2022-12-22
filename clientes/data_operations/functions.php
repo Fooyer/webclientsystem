@@ -40,7 +40,6 @@ function adicionaCliente($id,$telefone,$email,$telefone){
             CURLOPT_RETURNTRANSFER => false
         ];
 
-        // Initialize cURL and make the request
         $ch = curl_init();
         curl_setopt_array($ch, $options);
         curl_setopt(
