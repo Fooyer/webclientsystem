@@ -154,7 +154,7 @@
 
     const rows = table.rows;
 
-    const pages = Math.ceil(rows.length / 10);
+    const pages = Math.ceil(rows.length / 2);
     
     for (let i = 0; i < pages; i++) {
 
@@ -176,8 +176,8 @@
     
     const rows = table.rows;
     
-    const startIndex = (page - 1) * 10;
-    const endIndex = startIndex + 10;
+    const startIndex = (page - 1) * 2;
+    const endIndex = startIndex + 2;
     
     
     for (let i = 0; i < rows.length; i++) {
