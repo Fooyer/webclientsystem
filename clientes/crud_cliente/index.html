@@ -72,11 +72,6 @@
         <?php
 
         foreach ($dados as $propriedade => $valor) { 
-                
-            $count = $count + 1;
-            if ($count >= $start-5){
-            
-            ?>
 
             <tr id="linhaTabela" onclick="teste(event)">
 
@@ -93,10 +88,6 @@
             </tr>
 
         <?php
-        }
-            
-        if ($count == $start + 5){
-            break;
         }}; ?>
 
 </body>
