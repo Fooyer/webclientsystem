@@ -81,7 +81,7 @@ header{
 .formularioCliente{
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     width: 15vw;
     height: 35vh;
     background-color: rgb(98, 98, 231);
@@ -98,8 +98,8 @@ header{
 
 #caixaFormulario{
 
-    width: 100vw;
-    height: 25vh;
+    width: 15vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     margin-top: 5vh;
