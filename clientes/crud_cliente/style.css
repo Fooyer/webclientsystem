@@ -102,6 +102,7 @@ header{
     background-color: rgb(235, 235, 255);
     box-shadow: 0px 0px 5px black;
     flex-direction: column;
+    border: 1px solid black;
 
 }
 
