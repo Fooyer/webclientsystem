@@ -123,32 +123,19 @@ header{
 
 #campoID{
 
-    height: 30%;
-    width: 15vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 
 }
 
 #campoID label{
 
-    margin-bottom: 5px;
-    margin-top: 20px;
-    font-size: larger;
-    font-weight: bold;
+
 
 }
 
 #camposDados{
 
-    margin-top: 10px;
-    width: 15vw;
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+   
 
 }
 
@@ -164,15 +151,6 @@ header{
     width: 15vw;
     display: flex;
     justify-content: end;
-
-}
-
-#cambut{
-
-    height: 100%;
-    width: 40vw;
-    display: flex;
-    justify-content: center;
 
 }
 
