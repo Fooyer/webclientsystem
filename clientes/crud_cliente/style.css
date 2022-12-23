@@ -86,6 +86,7 @@ header{
     height: 35vh;
     background-color: rgb(98, 98, 231);
     box-shadow: 0px 0px 5px black;
+    flex-direction: column;
 
 }
 
