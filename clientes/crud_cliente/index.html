@@ -73,39 +73,44 @@
         
         $start = $count;
 
-        foreach ($dados as $propriedade => $valor) { 
-            
-            $count = $count + 1;
-            
-            ?>
+        function gerarGrid(){
+            foreach ($dados as $propriedade => $valor) { 
+                
+                $count = $count + 1;
+                
+                ?>
 
-            <tr id="linhaTabela" onclick="teste(event)">
+                <tr id="linhaTabela" onclick="teste(event)">
 
-                <?php foreach ($valor as $propriedade2 => $valor2) { ?>
+                    <?php foreach ($valor as $propriedade2 => $valor2) { ?>
 
-                    <td>
+                        <td>
 
-                        <?php echo $valor2; ?>
+                            <?php echo $valor2; ?>
 
-                    </td>
+                        </td>
 
-                <?php }; ?>
+                    <?php }; ?>
 
-            </tr>
+                </tr>
 
-        <?php
-            
-        if ($count == $start + 5){
-            break;
-        }
-    
-        }; ?>
+            <?php
+                
+            if ($count == $start + 5){
+                break;
+            }
+        
+        }};
+        
+        gerarGrid();
+        
+        ?>
 
     </table>
     <table class="tabelaCliente">
         <tr>
             
-            <td>
+            <td onclick="paginaSeguinte()">
                 Página seguinte
             </td>
 
@@ -166,6 +171,21 @@
        
         flagSelec = 0
         eventoAnt = 0
+
+    }
+
+</script>
+<script>
+
+    function paginaSeguinte(){
+
+        <?php
+        
+            $count = $start;
+            $start =  $start + 5;
+            gerarGrid();
+        
+        ?>
 
     }
 
