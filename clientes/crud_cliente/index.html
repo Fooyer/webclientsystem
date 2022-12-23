@@ -73,7 +73,7 @@
         
         $start = $count;
 
-        public function gerarGrid() {
+        function gerarGrid($dados) {
 
             foreach ($dados as $propriedade => $valor) { 
                 
@@ -103,7 +103,7 @@
         
         }};
         
-        gerarGrid();
+        gerarGrid($dados);
         
         ?>
 
@@ -184,7 +184,7 @@
         
             $count = $start;
             $start =  $start + 5;
-            gerarGrid();
+            gerarGrid($dados);
         
         ?>;
 
