@@ -29,65 +29,67 @@
 
     <div class="crudCliente">
 
-    <div id="caixaFormulario">
-        <form action="./../data_operations/salvarCliente.php" method="get" class="formularioCliente">
+        <div id="caixaFormulario">
+            <form action="./../data_operations/salvarCliente.php" method="get" class="formularioCliente">
 
-            <div id="campoID">
-                <label for="ID" id="labelID">ID</label>
-                <input type="text" readonly name="ID" id="clienteID">
-            </div> <br>
+                <div id="campoID">
+                    <label for="ID" id="labelID">ID</label>
+                    <input type="text" readonly name="ID" id="clienteID">
+                </div> <br>
 
-            <div id="cambut">
+                <div id="cambut">
 
-                <div id="camposDados">
-                    <div>
-                        <label for="Nome">Nome</label><br>
-                        <input type="text" name="Nome" id="">
-                    </div> <br>
-                    <div>
-                        <label for="Email">Email</label><br>
-                        <input type="email" name="Email" id="">
-                    </div> <br>
-                    <div>
-                        <label for="Telefone">Telefone</label><br>
-                        <input type="tel" name="Telefone" id="">
-                    </div> <br>
+                    <div id="camposDados">
+                        <div>
+                            <label for="Nome">Nome</label><br>
+                            <input type="text" name="Nome" id="">
+                        </div> <br>
+                        <div>
+                            <label for="Email">Email</label><br>
+                            <input type="email" name="Email" id="">
+                        </div> <br>
+                        <div>
+                            <label for="Telefone">Telefone</label><br>
+                            <input type="tel" name="Telefone" id="">
+                        </div> <br>
+                    </div>
+
+                    <div id="buttons">
+                        <button type="submit" id="botaoSalvar">Salvar</button>
+                        <button type="reset" id="botaoCancelar" onclick="resetForm()">Cancelar</button>
+                    </div>
+
                 </div>
 
-                <div id="buttons">
-                    <button type="submit" id="botaoSalvar">Salvar</button>
-                    <button type="reset" id="botaoCancelar" onclick="resetForm()">Cancelar</button>
-                </div>
+            </form>
+        </div>
 
-            </div>
+        <table class="tabelaCliente" id="tabelaCliente">
 
-        </form>
-    </div>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
 
-    <table class="tabelaCliente" id="tabelaCliente">
+            <?php foreach ($dados as $propriedade => $valor) { ?>
 
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Telefone</th>
+                <tr id="linhaTabela" onclick="teste(event)">
 
-        <?php foreach ($dados as $propriedade => $valor) { ?>
+                    <?php foreach ($valor as $propriedade2 => $valor2) { ?>
 
-            <tr id="linhaTabela" onclick="teste(event)">
+                        <td>
 
-                <?php foreach ($valor as $propriedade2 => $valor2) { ?>
+                            <?php echo $valor2; ?>
 
-                    <td>
+                        </td>
 
-                        <?php echo $valor2; ?>
+                    <?php }; ?>
 
-                    </td>
+                </tr>
 
-                <?php }; ?>
+            <?php }; ?>
 
-            </tr>
-
-        <?php }; ?>
+        </table>
 
     </div>
 
