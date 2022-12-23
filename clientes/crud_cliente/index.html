@@ -92,6 +92,7 @@
         </table>
 
     </div>
+    <div id="pagination-buttons"></div>
 
 </body>
 </html>
@@ -145,5 +146,61 @@
         eventoAnt = 0
 
     }
+
+</script>
+<script>
+
+    function addPaginationButtons(table, buttonsContainer) {
+
+    const rows = table.rows;
+
+    const pages = Math.ceil(rows.length / rowsPerPage);
+    
+    for (let i = 0; i < pages; i++) {
+
+        const button = document.createElement('button');
+        
+        button.textContent = i + 1;
+
+        button.addEventListener('click', () => {
+
+        showPage(table, i + 1);
+
+        });
+
+        buttonsContainer.appendChild(button);
+    }
+    }
+
+    function showPage(table, page) {
+    
+    const rows = table.rows;
+    
+    const startIndex = (page - 1) * rowsPerPage;
+    const endIndex = startIndex + rowsPerPage;
+    
+    
+    for (let i = 0; i < rows.length; i++) {
+            table.rows[i].style.display = 'none';
+        }
+
+        for (let i = startIndex; i < endIndex; i++) {
+            if (i < rows.length) {
+                rows[i].style.display = 'table-row';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Obtenha a tabela e o elemento que irá conter os botões de paginação
+        const table = document.querySelector('table');
+        const buttonsContainer = document.querySelector('#pagination-buttons');
+
+        // Adicione os botões de paginação
+        addPaginationButtons(table, buttonsContainer);
+
+        // Exiba a primeira página da tabela
+        showPage(table, 1);
+    });
 
 </script>
