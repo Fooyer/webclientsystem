@@ -70,7 +70,7 @@ header{
 
 .tabelaCliente tr{
 
-    background-color: #effffe;
+    background-color: #f1fcfb;
 
 }
 
@@ -89,7 +89,7 @@ header{
 
 #linhaTabela:hover{
 
-    background: rgb(170, 170, 170) !important;
+    background: rgb(201, 201, 201) !important;
 
 }
 
