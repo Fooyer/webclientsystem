@@ -1,12 +1,12 @@
-
-            <?php
+<?php
             
-            function paginaSeguinte(){
+function paginaSeguinte(){
 
-                $start =  $start + 5;
-                gerarGrid($dados);
-            }
-           ?>
+    $start =  $start + 5;
+    gerarGrid($dados);
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -123,7 +123,7 @@
     <table class="tabelaCliente">
         <tr>
             
-            <td onclick="paginaSeguinte()">
+            <td onclick="<?php paginaSeguinte(); ?>">
                 Página seguinte
             </td>
 
