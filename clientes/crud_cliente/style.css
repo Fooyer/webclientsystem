@@ -56,8 +56,7 @@ header{
 .tabelaCliente{
 
     margin-top: 2vh;
-    margin-left: 10vw;
-    
+    margin-left: 8vw;
     width: 70vw;
 
 }
@@ -108,8 +107,9 @@ header{
 
 #caixaFormulario{
 
+    margin-left: 2vw;
     width: 15vw;
-    height: 100vh;
+    height: 45vh;
     display: flex;
     margin-top: 5vh;
 
