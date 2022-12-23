@@ -89,7 +89,7 @@ header{
 
 #linhaTabela:hover:not([style*="background: yellow"]){
 
-    background: rgb(201, 201, 201);
+    background: rgb(201, 201, 201) !important;
 
 }
 
