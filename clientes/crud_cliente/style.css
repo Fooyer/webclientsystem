@@ -206,3 +206,10 @@ header{
     background-color: #cc1b0f;
 
 }
+
+.crudCliente{
+
+    display: flex;
+    align-items: flex-start;
+
+}
