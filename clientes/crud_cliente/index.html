@@ -66,28 +66,34 @@
 
         <table class="tabelaCliente" id="tabelaCliente">
 
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Telefone</th>
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+            </thead>
 
-            <?php foreach ($dados as $propriedade => $valor) { ?>
+            <tbody>
 
-                <tr id="linhaTabela" onclick="teste(event)">
+                <?php foreach ($dados as $propriedade => $valor) { ?>
 
-                    <?php foreach ($valor as $propriedade2 => $valor2) { ?>
+                    <tr id="linhaTabela" onclick="teste(event)">
 
-                        <td>
+                        <?php foreach ($valor as $propriedade2 => $valor2) { ?>
 
-                            <?php echo $valor2; ?>
+                            <td>
 
-                        </td>
+                                <?php echo $valor2; ?>
 
-                    <?php }; ?>
+                            </td>
 
-                </tr>
+                        <?php }; ?>
 
-            <?php }; ?>
+                    </tr>
+
+                <?php }; ?>
+
+            </tbody>
 
         </table>
 
@@ -152,42 +158,42 @@
 
     function addPaginationButtons(table, buttonsContainer) {
 
-    const rows = table.rows;
+        const rows = table.rows;
 
-    const pages = Math.ceil(rows.length / 1);
-    
-    for (let i = 0; i < pages; i++) {
-
-        const button = document.createElement('button');
+        const pages = Math.ceil(rows.length / 1);
         
-        button.textContent = i + 1;
+        for (let i = 0; i < pages; i++) {
 
-        button.addEventListener('click', () => {
+            const button = document.createElement('button');
+            
+            button.textContent = i + 1;
 
-            showPage(table, i + 1);
+            button.addEventListener('click', () => {
 
-        });
+                showPage(table, i + 1);
 
-        buttonsContainer.appendChild(button);
-    }
+            });
+
+            buttonsContainer.appendChild(button);
+        }
     }
 
     function showPage(table, page) {
     
-    const rows = table.rows;
-    
-    const startIndex = (page - 1) * 1;
-    const endIndex = startIndex + 1;
-    
-    
-    for (let i = 0; i < rows.length; i++) {
+        const rows = table.rows;
+        
+        const startIndex = (page - 1) * 1;
+        const endIndex = startIndex + 1;
+        
+        
+        for (let i = 0; i < rows.length; i++) {
 
             table.rows[i].style.display = 'none';
 
         }
 
         for (let i = startIndex; i < endIndex; i++) {
-            
+
             if (i < rows.length) {
                 rows[i].style.display = 'table-row';
             }
