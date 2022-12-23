@@ -55,6 +55,9 @@ header{
 
 .tabelaCliente{
 
+    margin-top: 2vh;
+    margin-right: 1vw;
+    float: right;
     width: 70vw;
 
 }
