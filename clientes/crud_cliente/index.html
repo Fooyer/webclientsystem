@@ -78,6 +78,7 @@
             foreach ($dados as $propriedade => $valor) { 
                 
                 $count = $count + 1;
+                if ($count => $start-5){
                 
                 ?>
 
@@ -96,7 +97,8 @@
                 </tr>
 
             <?php
-                
+            }
+            
             if ($count == $start + 5){
                 break;
             }
@@ -182,7 +184,6 @@
 
         <?php
         
-            $count = $start;
             $start =  $start + 5;
             gerarGrid($dados);
         
