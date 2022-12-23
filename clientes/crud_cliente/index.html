@@ -117,7 +117,7 @@
 
         if (flagSelec == 0){
 
-            event.path[1].style.background = "#fcff00";
+            event.path[1].style.background = "yellow";
 
             flagSelec = 1
             eventoAnt = event
@@ -125,11 +125,11 @@
         }
         else{
             
-            eventoAnt.path[1].style.background = "#f1fcfb";
+            eventoAnt.path[1].style.background = "#f7fdfd";
 
             flagSelec = 1
             eventoAnt = event
-            event.path[1].style.background = "#fcff00";
+            event.path[1].style.background = "yellow";
 
         }
 
@@ -137,7 +137,7 @@
 
     function resetForm(){
 
-        eventoAnt.path[1].style.background = "#f1fcfb";
+        eventoAnt.path[1].style.background = "#f7fdfd";
        
         flagSelec = 0
         eventoAnt = 0
