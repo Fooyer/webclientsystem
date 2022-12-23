@@ -26,6 +26,6 @@ class crudCliente {
 $response = obterClientes();
 
 new crudCliente($response);
-
+;
 
 ?>
