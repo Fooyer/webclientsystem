@@ -69,7 +69,11 @@
         <th>Email</th>
         <th>Telefone</th>
 
-        <?php foreach ($dados as $propriedade => $valor) { 
+        <?php
+        
+        $start = $count
+
+        foreach ($dados as $propriedade => $valor) { 
             
             $count = $count + 1;
             
@@ -87,7 +91,7 @@
 
                 <?php };
                 
-                if ($count == 5){
+                if ($count == $start + 5){
                     break;
                 }
                 
