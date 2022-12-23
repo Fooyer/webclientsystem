@@ -155,12 +155,13 @@ header{
 
 #camposDados input{
 
-    padding: 2px;
+    padding: 5px;
 
 }
 
 #buttons{
 
+    margin-top: 15px;
     height: 30%;
     width: 15vw;
     display: flex;
@@ -210,6 +211,6 @@ header{
 .crudCliente{
 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 
 }
