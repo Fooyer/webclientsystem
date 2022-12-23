@@ -147,7 +147,7 @@ header{
     width: 40vw;
     height: 70%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
 }
