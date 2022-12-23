@@ -124,6 +124,21 @@
         </tr>
     </table>
 
+    <script>
+
+        function paginaSeguinte(){
+    
+            <?php
+            
+                $start =  $start + 5;
+                gerarGrid($dados);
+            
+           ?>
+    
+        }
+    
+    </script>
+
 </body>
 </html>
 
@@ -174,20 +189,6 @@
        
         flagSelec = 0
         eventoAnt = 0
-
-    }
-
-</script>
-<script>
-
-    function paginaSeguinte(){
-
-        <?php
-        
-            $start =  $start + 5;
-            gerarGrid($dados);
-        
-        ?>
 
     }
 
