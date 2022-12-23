@@ -147,7 +147,7 @@ header{
     width: 40vw;
     height: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
 }
@@ -161,7 +161,7 @@ header{
 #buttons{
 
     height: 30%;
-    width: 44vw;
+    width: 15vw;
     display: flex;
     justify-content: end;
 
@@ -173,7 +173,6 @@ header{
     width: 40vw;
     display: flex;
     justify-content: center;
-    flex-direction: column;
 
 }
 
