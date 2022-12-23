@@ -87,7 +87,7 @@ header{
 
 }
 
-#linhaTabela:hover:not([style*="color: yellow"]){
+#linhaTabela:hover:not([style*="background-color: yellow"]){
 
     background-color: rgb(201, 201, 201) !important;
 
