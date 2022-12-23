@@ -76,8 +76,9 @@ header{
 
 .tabelaCliente th{
 
-    background-color: #71d4c7;
+    background-color: rgb(10, 10, 112);
     padding: 5px;
+    color: white;
 
 }
 
