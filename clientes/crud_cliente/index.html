@@ -80,50 +80,40 @@ function paginaSeguinte(){
         <th>Telefone</th>
 
         <?php
-        
-        $start = $count;
 
-        function gerarGrid($dados) {
-
-            foreach ($dados as $propriedade => $valor) { 
+        foreach ($dados as $propriedade => $valor) { 
                 
-                $count = $count + 1;
-                if ($count >= $start-5){
-                
-                ?>
-
-                <tr id="linhaTabela" onclick="teste(event)">
-
-                    <?php foreach ($valor as $propriedade2 => $valor2) { ?>
-
-                        <td>
-
-                            <?php echo $valor2; ?>
-
-                        </td>
-
-                    <?php }; ?>
-
-                </tr>
-
-            <?php
-            }
+            $count = $count + 1;
+            if ($count >= $start-5){
             
-            if ($count == $start + 5){
-                break;
-            }
-        
-        }};
-        
-        gerarGrid($dados);
-        
-        ?>
+            ?>
+
+            <tr id="linhaTabela" onclick="teste(event)">
+
+                <?php foreach ($valor as $propriedade2 => $valor2) { ?>
+
+                    <td>
+
+                        <?php echo $valor2; ?>
+
+                    </td>
+
+                <?php }; ?>
+
+            </tr>
+
+        <?php
+        }
+            
+        if ($count == $start + 5){
+            break;
+        }}; ?>
 
     </table>
     <table class="tabelaCliente">
         <tr>
             
-            <td onclick="<?php paginaSeguinte(); ?>">
+            <td>
                 Página seguinte
             </td>
 
