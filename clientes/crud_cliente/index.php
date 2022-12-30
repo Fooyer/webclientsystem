@@ -6,6 +6,7 @@ include_once("../data_operations/functions.php");
 class crudCliente {
 
     private $response = null;
+    private $teste = "Aoba";
 
     function __construct($response){
 

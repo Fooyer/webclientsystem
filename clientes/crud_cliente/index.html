@@ -9,7 +9,7 @@
 
     <title>Clientes</title>
 </head>
-<body>
+<body onload="montaTabela()">
     
     <header>
     
@@ -210,4 +210,13 @@
         showPage(table, 1);
     });
 
+</script>
+<script>
+    function montaTabela(){
+
+        const dados = "<?php $this->teste ?>"
+
+        console.log(dados)
+
+    }
 </script>
