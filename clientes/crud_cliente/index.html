@@ -91,7 +91,7 @@
     let flagSelec = 0
     let eventoAnt = 0
 
-    function teste(event){
+    function obterDadosLinhaTabela(event){
 
         var tds = event.path[1].getElementsByTagName("td");
         var inputs = document.getElementsByClassName("formularioCliente")[0].getElementsByTagName("input");
@@ -166,6 +166,7 @@
 
             const tr = document.createElement('tr');
             tr.id = "linhaTabela"
+            tr.onclick = "obterDadosLinhaTabela()"
             tr.innerHTML = `
             <td>${row.name}</td>
             <td>${row.age}</td>
