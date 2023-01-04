@@ -65,7 +65,15 @@
         </div>
 
         <table class="tabelaCliente" id="my-table">
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+            </thead>
+            <tbody id="my-table">
 
+            </tbody>
         </table>
 
         <button id="prev-page">Página Anterior</button>
@@ -129,63 +137,6 @@
 </script>
 <script>
 
-    function addPaginationButtons(table, buttonsContainer) {
-
-        const rows = table.rows;
-
-        const pages = Math.ceil(rows.length / 10);
-        
-        for (let i = 0; i < pages; i++) {
-
-            const button = document.createElement('button');
-            
-            button.textContent = i + 1;
-
-            button.addEventListener('click', () => {
-
-                showPage(table, i + 1);
-
-            });
-
-            buttonsContainer.appendChild(button);
-        }
-    }
-
-    function showPage(table, page) {
-    
-        const rows = table.rows;
-        
-        const startIndex = (page - 1) * 10;
-        const endIndex = startIndex + 10;
-        
-        
-        for (let i = 0; i < rows.length; i++) {
-
-            table.rows[i].style.display = 'none';
-
-        }
-
-        for (let i = startIndex; i < endIndex; i++) {
-
-            if (i < rows.length) {
-                rows[i].style.display = 'table-row';
-            }
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        
-        const table = document.querySelector('tbody');
-        const buttonsContainer = document.querySelector('#pagination-buttons');
-
-        addPaginationButtons(table, buttonsContainer);
-
-        showPage(table, 1);
-    });
-
-</script>
-<script>
-
     const tableData = [
         { name: 'John', age: 30, city: 'New York' },
         { name: 'Jane', age: 25, city: 'London' },
@@ -196,6 +147,7 @@
     let currentPage = 1;
 
     function renderTable() {
+
         const table = document.getElementById('my-table');
 
         // Determine the start and end indices for the current page
@@ -221,24 +173,30 @@
     }
 
     function prevPage() {
+
         if (currentPage > 1) {
             currentPage--;
             renderTable();
         }
+
     }
 
     function nextPage() {
+
         if (currentPage < tableData.length / rowsPerPage) {
             currentPage++;
             renderTable();
         }
+
     }
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
 
     window.onload = function() {
+
         renderTable();
+        
     };
 
 

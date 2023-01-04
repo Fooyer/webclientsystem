@@ -46,14 +46,14 @@ header{
 
 }
 
-.my-table,th,td{
+.tabelaCliente,th,td{
 
     border: 1px solid black;
     border-spacing: inherit;
 
 }
 
-.my-table{
+.tabelaCliente{
 
     margin-top: 5vh;
     margin-left: 8vw;
@@ -61,20 +61,20 @@ header{
 
 }
 
-.my-table td{
+.tabelaCliente td{
 
     font-size: medium;
     padding: 5px;
 
 }
 
-.my-table tr{
+.tabelaCliente tr{
 
     background-color: rgb(235, 235, 255);
 
 }
 
-.my-table th{
+.tabelaCliente th{
 
     background-color: rgb(108, 108, 238);
     padding: 5px;
