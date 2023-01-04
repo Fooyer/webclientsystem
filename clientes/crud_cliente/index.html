@@ -64,36 +64,7 @@
             </form>
         </div>
 
-        <table class="tabelaCliente" id="tabelaCliente">
-
-            <thead>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Telefone</th>
-            </thead>
-
-            <tbody>
-
-                <?php foreach ($dados as $propriedade => $valor) { ?>
-
-                    <tr id="linhaTabela" onclick="teste(event)">
-
-                        <?php foreach ($valor as $propriedade2 => $valor2) { ?>
-
-                            <td>
-
-                                <?php echo $valor2; ?>
-
-                            </td>
-
-                        <?php }; ?>
-
-                    </tr>
-
-                <?php }; ?>
-
-            </tbody>
+        <table class="tabelaCliente" id="my-table">
 
         </table>
 
@@ -212,11 +183,61 @@
 
 </script>
 <script>
-    function montaTabela(){
 
-        const dados = "<?php $this->teste ?>"
+    const tableData = [
+        { name: 'John', age: 30, city: 'New York' },
+        { name: 'Jane', age: 25, city: 'London' },
+        { name: 'Bob', age: 35, city: 'Paris' },
+    ];
 
-        console.log(dados)
+    const rowsPerPage = 10;
+    let currentPage = 1;
 
+    function renderTable() {
+        const table = document.getElementById('my-table');
+
+        // Determine the start and end indices for the current page
+        const startIndex = (currentPage - 1) * rowsPerPage;
+        const endIndex = startIndex + rowsPerPage;
+
+        // Clear the table
+        table.innerHTML = '';
+
+        // Add rows to the table
+        for (let i = startIndex; i < endIndex; i++) {
+            const row = tableData[i];
+            if (!row) break; // Stop adding rows if we have run out of data
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+            <td>${row.name}</td>
+            <td>${row.age}</td>
+            <td>${row.city}</td>
+            `;
+            table.appendChild(tr);
+        }
     }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            renderTable();
+        }
+    }
+
+    function nextPage() {
+        if (currentPage < tableData.length / rowsPerPage) {
+            currentPage++;
+            renderTable();
+        }
+    }
+
+    document.getElementById('prev-page').addEventListener('click', prevPage);
+    document.getElementById('next-page').addEventListener('click', nextPage);
+
+    // Initial render of the table
+    renderTable();
+
+
+
 </script>
