@@ -166,7 +166,7 @@
 
             const tr = document.createElement('tr');
             tr.id = "linhaTabela"
-            tr.onclick = "obterDadosLinhaTabela(event)"
+            tr.onclick = obterDadosLinhaTabela(event);
             tr.innerHTML = `
             <td>${row.name}</td>
             <td>${row.age}</td>
