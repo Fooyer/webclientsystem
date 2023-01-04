@@ -64,7 +64,7 @@
             </form>
         </div>
 
-        <table class="tabelaCliente" id="my-table">
+        <table class="tabelaCliente" id="my-table" onload="renderTable()">
 
         </table>
 
@@ -234,10 +234,6 @@
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
-
-    // Initial render of the table
-    renderTable();
-
 
 
 </script>
