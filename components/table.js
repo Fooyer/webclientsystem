@@ -1,4 +1,4 @@
-export default class Table {
+export class Table {
 
     constructor(linhasPorPagina,arquivoAPI){
 
@@ -72,3 +72,5 @@ export default class Table {
     }
 
 }
+
+module.exports = Table;
