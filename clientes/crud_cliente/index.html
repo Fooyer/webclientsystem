@@ -144,7 +144,20 @@
 
     function renderTable() {
 
-        let tableData = fetch('./../data_operations/obterClientes.php').then(Response => Response.json()).then(data => {return data.json()})
+        let tableData;
+
+        var url = "./../data_operations/obterClientes.php"
+
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                tableData = xhr.response;
+            }
+        };
+
+        xhr.open('GET', url);
+        xhr.send();
 
         console.log(tableData)
 
