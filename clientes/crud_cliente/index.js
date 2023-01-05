@@ -70,7 +70,7 @@ class Table {
 
         this.rowsPerPage = linhasPorPagina
 
-        await fetch(arquivoAPI).then(Response => Response.json()).then(data => tableData = data)
+        await fetch(arquivoAPI).then(Response => Response.json()).then(data => this.tableData = data)
 
         this.renderTable()
 
