@@ -141,10 +141,9 @@
 
     const rowsPerPage = 10;
     let currentPage = 1;
+    let tableData;
 
     async function renderTable() {
-
-        let tableData;
 
         await fetch('./../data_operations/obterClientes.php').then(Response => Response.json()).then(data => tableData = data)
         
