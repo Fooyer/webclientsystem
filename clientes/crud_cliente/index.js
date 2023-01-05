@@ -1,7 +1,7 @@
-<script src="./../../components/table.js"></script>
+const Tabela = require('./../../components/table');
 
 window.onload = function() {
 
-    startTable(20,'./../data_operations/obterClientes.php')
+    const tabela = new Tabela(20,'./../data_operations/obterClientes.php')
 
 };

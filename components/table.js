@@ -1,64 +1,76 @@
-const rowsPerPage = 20;
-let currentPage = 1;
-let tableData;
+class Table {
 
-function renderTable() {
+    constructor(linhasPorPagina,arquivoAPI){
 
-    const table = document.getElementById('my-table');
+        this.rowsPerPage = 20;
+        this.currentPage = 1;
+        this.tableData;
 
-    const startIndex = (currentPage - 1) * rowsPerPage;
-    const endIndex = startIndex + rowsPerPage;
+        startTable(linhasPorPagina,arquivoAPI)
 
-    table.innerHTML = '';
-
-    for (let i = startIndex; i < endIndex; i++) {
-        const row = tableData[i];
-        if (!row) break;
-
-        console.log(row)
-
-        const tr = document.createElement('tr');
-
-        tr.id = "linhaTabela"
-
-        tr.setAttribute("onclick", "obterDadosLinhaTabela(event)")
-
-        tr.innerHTML = `
-        <td>${row.id}</td>
-        <td>${row.nome}</td>
-        <td>${row.email}</td>
-        <td>${row.telefone}</td>`
-
-        table.appendChild(tr)
     }
-}
 
-function prevPage() {
+    renderTable() {
 
-    if (currentPage > 1) {
-        currentPage--
+        const table = document.getElementById('my-table');
+
+        const startIndex = (currentPage - 1) * rowsPerPage;
+        const endIndex = startIndex + rowsPerPage;
+
+        table.innerHTML = '';
+
+        for (let i = startIndex; i < endIndex; i++) {
+            const row = tableData[i];
+            if (!row) break;
+
+            console.log(row)
+
+            const tr = document.createElement('tr');
+
+            tr.id = "linhaTabela"
+
+            tr.setAttribute("onclick", "obterDadosLinhaTabela(event)")
+
+            tr.innerHTML = `
+            <td>${row.id}</td>
+            <td>${row.nome}</td>
+            <td>${row.email}</td>
+            <td>${row.telefone}</td>`
+
+            table.appendChild(tr)
+        }
+    }
+
+    prevPage() {
+
+        if (currentPage > 1) {
+            currentPage--
+            renderTable()
+        }
+
+    }
+
+    nextPage() {
+
+        if (currentPage < tableData.length / rowsPerPage) {
+            currentPage++;
+            renderTable();
+        }
+
+    }
+
+    async startTable(linhasPorPagina,arquivoAPI){
+
+        rowsPerPage = linhasPorPagina
+
+        await fetch(arquivoAPI).then(Response => Response.json()).then(data => tableData = data)
+
         renderTable()
+
+        document.getElementById('prev-page').addEventListener('click', tabela.prevPage);
+        document.getElementById('next-page').addEventListener('click', tabela.nextPage);
     }
 
 }
 
-function nextPage() {
-
-    if (currentPage < tableData.length / rowsPerPage) {
-        currentPage++;
-        renderTable();
-    }
-
-}
-
-async function startTable(linhasPorPagina,arquivoAPI){
-
-    rowsPerPage = linhasPorPagina
-
-    await fetch(arquivoAPI).then(Response => Response.json()).then(data => tableData = data)
-
-    renderTable()
-    
-    document.getElementById('prev-page').addEventListener('click', prevPage);
-    document.getElementById('next-page').addEventListener('click', nextPage);
-}
+module.exports = Table;
