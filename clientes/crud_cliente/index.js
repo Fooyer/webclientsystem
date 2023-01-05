@@ -51,20 +51,20 @@ class Table {
 
     prevPage() {
 
-        if (this.currentPage > 1) {
-            this.currentPage--
-            this.renderTable()
+        if (tabela.currentPage > 1) {
+            tabela.currentPage--
+            tabela.renderTable()
         }
 
     }
 
     nextPage() {
 
-        console.log(this.tableData)
+        console.log(tabela.tableData)
 
-        if (this.currentPage < this.tableData.length / this.rowsPerPage) {
-            this.currentPage++;
-            this.renderTable();
+        if (tabela.currentPage < tabela.tableData.length / tabela.rowsPerPage) {
+            tabela.currentPage++;
+            tabela.renderTable();
         }
 
     }
