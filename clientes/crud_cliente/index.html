@@ -144,7 +144,7 @@
 
     function renderTable() {
 
-        let tableData = fetch('./../data_operations/obterClientes.php').then(Response => {Response.json()}).then(data => {return data})
+        let tableData = fetch('./../data_operations/obterClientes.php').then(Response => Response.json()).then(data => {return data.json()})
 
         console.log(tableData)
 
