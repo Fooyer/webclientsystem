@@ -144,13 +144,15 @@
     fetch('./../data_operations/obterClientes.php')
         .then(response => response.json())
         .then(data => tableData = data)
-         .catch(error => console.error(error))
+        .catch(error => console.error(error))
 
 
-    const rowsPerPage = 2;
+    const rowsPerPage = 10;
     let currentPage = 1;
 
     function renderTable() {
+
+        console.log(tableData)
 
         const table = document.getElementById('my-table');
 
