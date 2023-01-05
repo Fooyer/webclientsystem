@@ -1,4 +1,4 @@
-const MinhaClasse = require("../../components/table")
+const MinhaClasse = require("../../components/table").default
 
 window.onload = function() {
 
