@@ -1,4 +1,4 @@
-import { Table } from './../../components/table.js'
+import { Table } from "./table"
 
 window.onload = function() {
 
