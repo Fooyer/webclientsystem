@@ -52,8 +52,6 @@ function prevPage() {
 
 function nextPage() {
 
-    console.log(tabela.tableData)
-
     if (tabela.currentPage < tabela.tableData.length / tabela.rowsPerPage) {
         tabela.currentPage++;
         tabela.renderTable();
