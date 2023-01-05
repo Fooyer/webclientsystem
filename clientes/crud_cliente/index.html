@@ -143,11 +143,7 @@
     let currentPage = 1;
     let tableData;
 
-    async function renderTable() {
-
-        await fetch('./../data_operations/obterClientes.php').then(Response => Response.json()).then(data => tableData = data)
-        
-        console.log(tableData)
+    function renderTable() {
 
         const table = document.getElementById('my-table');
 
@@ -162,23 +158,23 @@
 
             const tr = document.createElement('tr');
             tr.id = "linhaTabela"
-            tr.setAttribute("onclick", "obterDadosLinhaTabela(event)");
+            tr.setAttribute("onclick", "obterDadosLinhaTabela(event)")
             tr.innerHTML = `
             <td>${row.id}</td>
             <td>${row.nome}</td>
             <td>${row.email}</td>
             <td>${row.telefone}</td>
-            `;
+            `
 
-            table.appendChild(tr);
+            table.appendChild(tr)
         }
     }
 
     function prevPage() {
 
         if (currentPage > 1) {
-            currentPage--;
-            renderTable();
+            currentPage--
+            renderTable()
         }
 
     }
@@ -195,9 +191,11 @@
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
 
-    window.onload = function() {
+    window.onload = async function() {
 
-        renderTable();
+        await fetch('./../data_operations/obterClientes.php').then(Response => Response.json()).then(data => tableData = data)
+
+        renderTable()
 
     };
 
