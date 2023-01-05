@@ -13,7 +13,7 @@ class Table {
         this.currentPage = 1;
         this.tableData;
 
-        startTable(linhasPorPagina,arquivoAPI)
+        this.startTable(linhasPorPagina,arquivoAPI)
 
     }
 
@@ -52,7 +52,7 @@ class Table {
 
         if (currentPage > 1) {
             currentPage--
-            renderTable()
+            this.renderTable()
         }
 
     }
@@ -61,18 +61,18 @@ class Table {
 
         if (currentPage < tableData.length / rowsPerPage) {
             currentPage++;
-            renderTable();
+            this.renderTable();
         }
 
     }
 
     async startTable(linhasPorPagina,arquivoAPI){
 
-        rowsPerPage = linhasPorPagina
+        this.rowsPerPage = linhasPorPagina
 
         await fetch(arquivoAPI).then(Response => Response.json()).then(data => tableData = data)
 
-        renderTable()
+        this.renderTable()
 
         document.getElementById('prev-page').addEventListener('click', tabela.prevPage);
         document.getElementById('next-page').addEventListener('click', tabela.nextPage);
