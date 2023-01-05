@@ -1,4 +1,4 @@
-class Table {
+export class Table {
 
     constructor(linhasPorPagina,arquivoAPI){
 
@@ -72,5 +72,3 @@ class Table {
     }
 
 }
-
-module.exports = Table;
