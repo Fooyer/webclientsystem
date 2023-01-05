@@ -139,16 +139,12 @@
 </script>
 <script>
 
-    const tableData = [
-        { name: 'John', age: 30, city: 'New York' },
-        { name: 'Jane', age: 25, city: 'London' },
-        { name: 'Bob', age: 35, city: 'Paris' },
-    ];
+    const tableData = null
 
     fetch('./../data_operations/obterClientes.php')
-    .then(response => response.json())
-     .then(data => console.log(data))
-      .catch(error => console.error(error))
+        .then(response => response.json())
+        .then(data => tableData = data)
+         .catch(error => console.error(error))
 
 
     const rowsPerPage = 2;
