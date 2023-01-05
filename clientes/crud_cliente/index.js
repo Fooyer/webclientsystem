@@ -60,7 +60,9 @@ class Table {
 
     nextPage() {
 
-        if (this.currentPage < this.tableData.length / this.rowsPerPage) {
+        let data = this.tableData
+
+        if (this.currentPage < data.length / this.rowsPerPage) {
             this.currentPage++;
             this.renderTable();
         }
