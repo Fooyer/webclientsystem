@@ -152,17 +152,14 @@
 
         const table = document.getElementById('my-table');
 
-        // Determine the start and end indices for the current page
         const startIndex = (currentPage - 1) * rowsPerPage;
         const endIndex = startIndex + rowsPerPage;
 
-        // Clear the table
         table.innerHTML = '';
 
-        // Add rows to the table
         for (let i = startIndex; i < endIndex; i++) {
             const row = tableData[i];
-            if (!row) break; // Stop adding rows if we have run out of data
+            if (!row) break;
 
             const tr = document.createElement('tr');
             tr.id = "linhaTabela"
@@ -173,6 +170,7 @@
             <td>${row.city}</td>
             <td>${row.telefone}</td>
             `;
+            
             table.appendChild(tr);
         }
     }
