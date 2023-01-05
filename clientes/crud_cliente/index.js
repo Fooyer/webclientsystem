@@ -74,8 +74,8 @@ class Table {
 
         this.renderTable()
 
-        document.getElementById('prev-page').addEventListener('click', tabela.prevPage);
-        document.getElementById('next-page').addEventListener('click', tabela.nextPage);
+        document.getElementById('prev-page').addEventListener('click', prevPage);
+        document.getElementById('next-page').addEventListener('click', nextPage);
     }
 
 }
