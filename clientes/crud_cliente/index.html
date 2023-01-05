@@ -139,10 +139,12 @@
 </script>
 <script>
 
-    const tableData = fetch('./../data_operations/obterClientes.php')
-                        .then(response => response.json())
-                        .then(data => tableData)
-                        .catch(error => console.error(error))
+    const tableData = null
+
+     fetch('./../data_operations/obterClientes.php')
+        .then(response => response.json())
+        .then(data => tableData = data)
+        .catch(error => console.error(error))
 
 
     const rowsPerPage = 10;
