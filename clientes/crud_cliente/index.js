@@ -1,82 +1,70 @@
 
 window.onload = function() {
 
-    const tabela = new Table(20,'./../data_operations/obterClientes.php')
+   startTable();
 
-    document.getElementById('prev-page').addEventListener('click', tabela.prevPage);
-    document.getElementById('next-page').addEventListener('click', tabela.nextPage);
+    document.getElementById('prev-page').addEventListener('click', prevPage);
+    document.getElementById('next-page').addEventListener('click', nextPage);
 
 };
 
-class Table {
+let rowsPerPage = 20;
+let currentPage = 1;
+let tableData;
 
-    constructor(linhasPorPagina,arquivoAPI){
+function renderTable() {
 
-        this.rowsPerPage = 20;
-        this.currentPage = 1;
-        this.tableData;
+    const table = document.getElementById('my-table');
 
-        this.startTable(linhasPorPagina,arquivoAPI)
+    const startIndex = (currentPage - 1) * rowsPerPage;
+    const endIndex = startIndex + rowsPerPage;
 
+    table.innerHTML = '';
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const row = tableData[i];
+        if (!row) break;
+
+        const tr = document.createElement('tr');
+
+        tr.id = "linhaTabela"
+
+        tr.setAttribute("onclick", "obterDadosLinhaTabela(event)")
+
+        tr.innerHTML = `
+        <td>${row.id}</td>
+        <td>${row.nome}</td>
+        <td>${row.email}</td>
+        <td>${row.telefone}</td>`
+
+        table.appendChild(tr)
+    }
+}
+
+function prevPage() {
+
+    if (tabela.currentPage > 1) {
+        tabela.currentPage--
+        tabela.renderTable()
     }
 
-    renderTable() {
+}
 
-        const table = document.getElementById('my-table');
+function nextPage() {
 
-        const startIndex = (this.currentPage - 1) * this.rowsPerPage;
-        const endIndex = startIndex + this.rowsPerPage;
+    console.log(tabela.tableData)
 
-        table.innerHTML = '';
-
-        for (let i = startIndex; i < endIndex; i++) {
-            const row = this.tableData[i];
-            if (!row) break;
-
-            const tr = document.createElement('tr');
-
-            tr.id = "linhaTabela"
-
-            tr.setAttribute("onclick", "obterDadosLinhaTabela(event)")
-
-            tr.innerHTML = `
-            <td>${row.id}</td>
-            <td>${row.nome}</td>
-            <td>${row.email}</td>
-            <td>${row.telefone}</td>`
-
-            table.appendChild(tr)
-        }
+    if (tabela.currentPage < tabela.tableData.length / tabela.rowsPerPage) {
+        tabela.currentPage++;
+        tabela.renderTable();
     }
 
-    prevPage() {
+}
 
-        if (tabela.currentPage > 1) {
-            tabela.currentPage--
-            tabela.renderTable()
-        }
+async function startTable(){
 
-    }
+    await fetch("./../data_operations/obterClientes.php").then(Response => Response.json()).then(data => tableData = data)
 
-    nextPage() {
-
-        console.log(tabela.tableData)
-
-        if (tabela.currentPage < tabela.tableData.length / tabela.rowsPerPage) {
-            tabela.currentPage++;
-            tabela.renderTable();
-        }
-
-    }
-
-    async startTable(linhasPorPagina,arquivoAPI){
-
-        this.rowsPerPage = linhasPorPagina
-
-        await fetch(arquivoAPI).then(Response => Response.json()).then(data => this.tableData = data)
-
-        this.renderTable()
-
-    }
+    renderTable()
 
 }
