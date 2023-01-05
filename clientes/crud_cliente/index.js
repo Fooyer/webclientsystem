@@ -1,4 +1,4 @@
-const MinhaClasse = require("../../components/table").default
+import Table from "../../components/table"
 
 window.onload = function() {
 
