@@ -139,11 +139,9 @@
 </script>
 <script>
 
-    let tableData;
-
-     fetch('./../data_operations/obterClientes.php')
+    fetch('./../data_operations/obterClientes.php')
         .then(response => response.json())
-        .then(data => {tableData = data})
+        .then(data => {const tableData = data})
         .catch(error => console.error(error))
 
 
