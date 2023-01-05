@@ -142,23 +142,12 @@
     const rowsPerPage = 10;
     let currentPage = 1;
 
-    function renderTable() {
+    async function renderTable() {
 
         let tableData;
 
-        var url = "./../data_operations/obterClientes.php"
-
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = 'json';
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                tableData = console.log(xhr.response);
-            }
-        };
-
-        xhr.open('GET', url);
-        xhr.send();
-
+        await fetch('./../data_operations/obterClientes.php').then(Response => Response.json()).then(data => tableData = data)
+        
         console.log(tableData)
 
         const table = document.getElementById('my-table');
