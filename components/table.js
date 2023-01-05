@@ -1,4 +1,4 @@
-export class Table {
+export default class Table {
 
     constructor(linhasPorPagina,arquivoAPI){
 
