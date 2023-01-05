@@ -152,7 +152,7 @@
         xhr.responseType = 'json';
         xhr.onreadystatechange = () => {
             if (xhr.readyState === XMLHttpRequest.DONE) {
-                tableData = xhr.response;
+                console.log(xhr.response);
             }
         };
 
