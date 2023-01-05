@@ -9,7 +9,7 @@
 
     <title>Clientes</title>
 </head>
-<body onloadstart="startTable(20,'./../data_operations/obterClientes.php')">
+<body>
     
     <header>
     
@@ -136,7 +136,15 @@
     }
 
 </script>
-<script src="./../../components/table.js"></script>
+<script src="./../../components/table.js">
+
+    window.onload = function(){
+
+        startTable(20,"./../data_operations/obterClientes.php")
+        
+    }
+
+</script>
 
 <!--script>
 
