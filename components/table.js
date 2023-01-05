@@ -65,6 +65,8 @@ async function startTable(linhasPorPagina,arquivoAPI){
 
     rowsPerPage = linhasPorPagina
 
+    console.log(linhasPorPagina)
+
     await fetch(arquivoAPI).then(Response => Response.json()).then(data => tableData = data)
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
