@@ -53,7 +53,7 @@ function nextPage() {
 
 window.onload = async function() {
 
-    await fetch('./../data_operations/obterClientes.php').then(Response => Response.json()).then(data => tableData = data)
+    await fetch('./../clientes/data_operations/obterClientes.php').then(Response => Response.json()).then(data => tableData = data)
 
     renderTable()
 
