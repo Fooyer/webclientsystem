@@ -3,6 +3,9 @@ window.onload = function() {
 
     const tabela = new Table(20,'./../data_operations/obterClientes.php')
 
+    document.getElementById('prev-page').addEventListener('click', tabela.prevPage);
+    document.getElementById('next-page').addEventListener('click', tabela.nextPage);
+
 };
 
 class Table {
@@ -46,25 +49,25 @@ class Table {
         }
     }
 
+    prevPage() {
+
+        if (this.currentPage > 1) {
+            this.currentPage--
+            this.renderTable()
+        }
+
+    }
+
+    nextPage() {
+
+        if (this.currentPage < this.tableData.length / this.rowsPerPage) {
+            this.currentPage++;
+            this.renderTable();
+        }
+
+    }
+
     async startTable(linhasPorPagina,arquivoAPI){
-
-        prevPage() {
-
-            if (this.currentPage > 1) {
-                this.currentPage--
-                this.renderTable()
-            }
-    
-        }
-    
-        nextPage() {
-    
-            if (this.currentPage < this.tableData.length / this.rowsPerPage) {
-                this.currentPage++;
-                this.renderTable();
-            }
-    
-        }
 
         this.rowsPerPage = linhasPorPagina
 
@@ -72,8 +75,6 @@ class Table {
 
         this.renderTable()
 
-        document.getElementById('prev-page').addEventListener('click', prevPage);
-        document.getElementById('next-page').addEventListener('click', nextPage);
     }
 
 }
