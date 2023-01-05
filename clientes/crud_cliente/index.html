@@ -139,16 +139,15 @@
 </script>
 <script>
 
-    fetch('./../data_operations/obterClientes.php')
-        .then(response => response.json())
-        .then(data => {const tableData = data})
-        .catch(error => console.error(error))
-
-
     const rowsPerPage = 10;
     let currentPage = 1;
 
     function renderTable() {
+
+        fetch('./../data_operations/obterClientes.php')
+        .then(response => response.json())
+        .then(data => {let tableData = data})
+        .catch(error => console.error(error))
 
         console.log(tableData)
 
