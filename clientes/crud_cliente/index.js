@@ -30,8 +30,6 @@ class Table {
             const row = this.tableData[i];
             if (!row) break;
 
-            console.log(row)
-
             const tr = document.createElement('tr');
 
             tr.id = "linhaTabela"
@@ -48,25 +46,25 @@ class Table {
         }
     }
 
-    prevPage() {
-
-        if (this.currentPage > 1) {
-            this.currentPage--
-            this.renderTable()
-        }
-
-    }
-
-    nextPage() {
-
-        if (this.currentPage < this.tableData.length / this.rowsPerPage) {
-            this.currentPage++;
-            this.renderTable();
-        }
-
-    }
-
     async startTable(linhasPorPagina,arquivoAPI){
+
+        prevPage() {
+
+            if (this.currentPage > 1) {
+                this.currentPage--
+                this.renderTable()
+            }
+    
+        }
+    
+        nextPage() {
+    
+            if (this.currentPage < this.tableData.length / this.rowsPerPage) {
+                this.currentPage++;
+                this.renderTable();
+            }
+    
+        }
 
         this.rowsPerPage = linhasPorPagina
 
