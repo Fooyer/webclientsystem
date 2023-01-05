@@ -51,13 +51,14 @@ function nextPage() {
 
 }
 
-window.onload = async function() {
+async function startTable(linhasPorPagina,arquivoAPI){
 
-    await fetch('./../data_operations/obterClientes.php').then(Response => Response.json()).then(data => tableData = data)
+    rowsPerPage = linhasPorPagina
+
+    await fetch(arquivoAPI).then(Response => Response.json()).then(data => tableData = data)
 
     renderTable()
-
-};
-
-document.getElementById('prev-page').addEventListener('click', prevPage);
-document.getElementById('next-page').addEventListener('click', nextPage);
+    
+    document.getElementById('prev-page').addEventListener('click', prevPage);
+    document.getElementById('next-page').addEventListener('click', nextPage);
+}
