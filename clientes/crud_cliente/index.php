@@ -4,6 +4,7 @@ class crudCliente {
 
     function __construct(){
 
+        header('Access-Control-Allow-Origin: *');
         $this->loadPage();
 
     }
