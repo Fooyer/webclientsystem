@@ -21,13 +21,13 @@ class Table {
 
         const table = document.getElementById('my-table');
 
-        const startIndex = (currentPage - 1) * rowsPerPage;
-        const endIndex = startIndex + rowsPerPage;
+        const startIndex = (this.currentPage - 1) * this.rowsPerPage;
+        const endIndex = startIndex + this.rowsPerPage;
 
         table.innerHTML = '';
 
         for (let i = startIndex; i < endIndex; i++) {
-            const row = tableData[i];
+            const row = this.tableData[i];
             if (!row) break;
 
             console.log(row)
@@ -50,8 +50,8 @@ class Table {
 
     prevPage() {
 
-        if (currentPage > 1) {
-            currentPage--
+        if (this.currentPage > 1) {
+            this.currentPage--
             this.renderTable()
         }
 
@@ -59,8 +59,8 @@ class Table {
 
     nextPage() {
 
-        if (currentPage < tableData.length / rowsPerPage) {
-            currentPage++;
+        if (this.currentPage < this.tableData.length / this.rowsPerPage) {
+            this.currentPage++;
             this.renderTable();
         }
 
