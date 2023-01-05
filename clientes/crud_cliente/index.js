@@ -43,18 +43,18 @@ function renderTable() {
 
 function prevPage() {
 
-    if (tabela.currentPage > 1) {
-        tabela.currentPage--
-        tabela.renderTable()
+    if (currentPage > 1) {
+        currentPage--
+        renderTable()
     }
 
 }
 
 function nextPage() {
 
-    if (tabela.currentPage < tabela.tableData.length / tabela.rowsPerPage) {
-        tabela.currentPage++;
-        tabela.renderTable();
+    if (currentPage < tableData.length / rowsPerPage) {
+        currentPage++;
+        renderTable();
     }
 
 }
