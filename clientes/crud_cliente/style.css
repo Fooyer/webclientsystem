@@ -247,6 +247,15 @@ header{
 
 }
 
+#mensagem-loading{
+
+    padding-left: 5px;
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: .2s;
+
+}
+
 @keyframes is-rotating {
     to {
       transform: rotate(1turn);

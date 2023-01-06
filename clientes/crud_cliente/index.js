@@ -3,23 +3,17 @@ window.onload = async function() {
 
     var loadingMessage = document.getElementById("loading-message");
 
-    const mensagem1 = document.createElement('div');
-    mensagem1.innerHTML = "Carregando Tabela..."
-    loadingMessage.appendChild(mensagem1)
+    const mensagem = document.createElement('div');
+    mensagem.innerHTML = "Carregando Tabela..."
+    mensagem.id = "mensagem-loading"
+    loadingMessage.appendChild(mensagem)
 
     await startTable();
 
-    mensagem1.innerHTML = "Tabela Carregada!"
+    document.getElementById('prev-page').addEventListener('click', prevPage);
+    document.getElementById('next-page').addEventListener('click', nextPage);
 
-    setTimeout(function() {
-
-    }, 1000);
-
-
-    await document.getElementById('prev-page').addEventListener('click', prevPage);
-    await document.getElementById('next-page').addEventListener('click', nextPage);
-
-    mensagem1.innerHTML = "Aguarde..."
+    mensagem.innerHTML = "Aguarde..."
 
     setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
