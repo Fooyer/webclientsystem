@@ -19,7 +19,7 @@ window.onload = function() {
     setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
         loadingMessage.style.opacity = 0;
-    }, 5000);
+    }, 5000000);
 
 };
 
