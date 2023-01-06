@@ -58,6 +58,7 @@ body{
 
     display: flex;
     justify-content: center;
+    flex-direction: row;
     width: 50%;
     height: 100%;
     background-color: rgb(235, 235, 255);
@@ -79,7 +80,6 @@ body{
 
     display: flex;
     justify-content: center;
-    flex-direction: row;
     margin-top: 2vh;
     width: 100vw;
     height: 30vh;
