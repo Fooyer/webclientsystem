@@ -8,8 +8,6 @@
 body{
 
     background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
 
 }
 
@@ -19,6 +17,7 @@ body{
     width: 80vw;
     background-color: black;
     height: 60vh;
+    margin-left: 10vw;
 
 }
 
