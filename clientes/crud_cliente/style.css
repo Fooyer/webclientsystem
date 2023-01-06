@@ -46,7 +46,7 @@ header{
 
 }
 
-.tabelaCliente,th,td{
+.tabelaCliente th,td{
 
     border: 1px solid black;
     border-spacing: inherit;
@@ -94,13 +94,6 @@ header{
     background: rgb(201, 201, 201) !important;
 
 }
-#linhaTabelaVazia{
-
-    background: rgb(201, 201, 201) !important;
-    border: none;
-
-}
-
 
 .formularioCliente{
 
