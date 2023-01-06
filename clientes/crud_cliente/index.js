@@ -11,6 +11,7 @@ window.onload = function() {
 
     const mensagem2 = document.createElement('div');
     mensagem2.innerHTML = "Tabela Carregada!"
+    loadingMessage.parentNode.removeChild(mensagem1);
     loadingMessage.appendChild(mensagem2)
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
@@ -18,6 +19,7 @@ window.onload = function() {
 
     const completo = document.createElement('div');
     completo.innerHTML = "Aguarde..."
+    loadingMessage.parentNode.removeChild(mensagem2);
     loadingMessage.appendChild(completo)
 
     setTimeout(function() {
