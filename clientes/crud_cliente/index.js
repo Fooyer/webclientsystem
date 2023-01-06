@@ -11,7 +11,7 @@ window.onload = function() {
      setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
         loadingMessage.style.opacity = 0;
-    }, 100000);
+    }, 5000);
 
 };
 
