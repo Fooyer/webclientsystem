@@ -18,7 +18,7 @@ window.onload = async function() {
     setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
         loadingMessage.style.opacity = 0;
-    }, 500000);
+    }, 1000);
 
 };
 
