@@ -31,7 +31,7 @@ function renderTable() {
 
         tr.id = "linhaTabela"
 
-        tr.setAttribute("onclick", "obterDadosLinhaTabela(event)")
+        tr.addEventListener('click', obterDadosLinhaTabela);
 
         tr.innerHTML = `
         <td>${row.id}</td>
