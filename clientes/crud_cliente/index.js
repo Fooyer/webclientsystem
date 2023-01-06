@@ -39,14 +39,16 @@ function renderTable() {
     table.innerHTML = '';
 
     for (let i = startIndex; i < endIndex; i++) {
+
         const row = tableData[i];
+
         if (!row){
 
             const tr = document.createElement('tr');
             tr.id = "linhaTabelaVazia"
-            tr.innerHTML = " "
+            tr.innerHTML = "a"
 
-        } else {
+        } else{
             const tr = document.createElement('tr');
 
             tr.id = "linhaTabela"
