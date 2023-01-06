@@ -224,10 +224,13 @@ header{
 #loading-message{
 
     position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    overflow: none;
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
     transform: scale(5);
 
 }
