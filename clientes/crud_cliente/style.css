@@ -11,41 +11,6 @@ body{
 
 }
 
-header{
-            
-    width: 100%;
-    height: 10vh;
-    background-color: rgb(10, 10, 112);
-    box-shadow: 0px 0px 15px black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.mainOption{
-
-    text-decoration: none;
-    color: white;
-    font-size: larger;
-
-}
-
-.mainOption:hover{
-
-    color: yellow;
-
-}
-
-.mainMenu{
-
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    width: 50%;
-
-}
-
 .tabelaCliente{
 
     margin-top: 5vh;
@@ -92,7 +57,7 @@ header{
 
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 50%;
     height: 40vh;
     background-color: rgb(235, 235, 255);
     box-shadow: 0px 0px 5px black;
@@ -111,8 +76,10 @@ header{
 
 #caixaFormulario{
 
-    margin-left: 2vw;
-    width: 15vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    width: 100vw;
     height: 45vh;
     display: flex;
     margin-top: 5vh;

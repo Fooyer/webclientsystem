@@ -25,7 +25,7 @@ window.onload = async function() {
 
 // Tabela
 
-let rowsPerPage = 20;
+let rowsPerPage = 15;
 let currentPage = 1;
 let tableData;
 
@@ -43,7 +43,7 @@ function renderTable() {
         const row = tableData[i];
 
         if (!row) break;
-        
+
         const tr = document.createElement('tr');
 
         tr.id = "linhaTabela"
