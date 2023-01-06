@@ -1,5 +1,5 @@
 
-window.onload = function() {
+window.onload = async function() {
 
     var loadingMessage = document.getElementById("loading-message");
 
@@ -7,19 +7,12 @@ window.onload = function() {
     mensagem1.innerHTML = "Carregando Tabela..."
     loadingMessage.appendChild(mensagem1)
 
-    startTable();
-
-    setTimeout(function() {
-    }, 1000);
+    await startTable();
 
     mensagem1.innerHTML = "Tabela Carregada!"
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
-
-    setTimeout(function() {
-    }, 1000);
-
 
     mensagem1.innerHTML = "Aguarde..."
 
