@@ -3,23 +3,27 @@ window.onload = function() {
 
     var loadingMessage = document.getElementById("loading-message");
 
-    const mensagem = document.createElement('div');
-    mensagem.innerHTML = "Carregando Tabela..."
-    loadingMessage.appendChild(mensagem)
+    const mensagem1 = document.createElement('div');
+    mensagem1.innerHTML = "Carregando Tabela..."
+    loadingMessage.append(mensagem1)
 
     startTable();
 
-    mensagem.innerHTML = "Tabela Carregada!"
+    const mensagem2 = document.createElement('div');
+    mensagem2.innerHTML = "Tabela Carregada!"
+    loadingMessage.append(mensagem2)
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
 
-    mensagem.innerHTML = "Aguarde..."
+    const completo = document.createElement('div');
+    completo.innerHTML = "Aguarde..."
+    loadingMessage.append(mensagem2)
 
     setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
         loadingMessage.style.opacity = 0;
-    }, 5000000);
+    }, 500000);
 
 };
 
