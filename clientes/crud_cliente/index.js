@@ -9,18 +9,19 @@ window.onload = function() {
 
     startTable();
 
-    loadingMessage.removeChild(mensagem1);
-    const mensagem2 = document.createElement('div');
-    mensagem2.innerHTML = "Tabela Carregada!"
-    loadingMessage.appendChild(mensagem2)
+    setTimeout(function() {
+    }, 1000);
+
+    mensagem1.innerHTML = "Tabela Carregada!"
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
 
-    loadingMessage.removeChild(mensagem2);
-    const completo = document.createElement('div');
-    completo.innerHTML = "Aguarde..."
-    loadingMessage.appendChild(completo)
+    setTimeout(function() {
+    }, 1000);
+
+
+    mensagem1.innerHTML = "Aguarde..."
 
     setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
