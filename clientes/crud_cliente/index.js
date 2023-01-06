@@ -11,8 +11,13 @@ window.onload = async function() {
 
     mensagem1.innerHTML = "Tabela Carregada!"
 
-    document.getElementById('prev-page').addEventListener('click', prevPage);
-    document.getElementById('next-page').addEventListener('click', nextPage);
+    setTimeout(function() {
+
+    }, 1000);
+
+
+    await document.getElementById('prev-page').addEventListener('click', prevPage);
+    await document.getElementById('next-page').addEventListener('click', nextPage);
 
     mensagem1.innerHTML = "Aguarde..."
 
