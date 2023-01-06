@@ -223,7 +223,7 @@ header{
 
 #loading-message{
 
-    position: absolute;
+    position: fixed;
     align-items: center;
     display: flex;
     justify-content: center;
