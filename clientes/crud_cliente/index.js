@@ -8,10 +8,9 @@ window.onload = function() {
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
 
-    loadingMessage.style.opacity = 0;
-
      setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
+        loadingMessage.style.opacity = 0;
     }, 1000);
 
 };
