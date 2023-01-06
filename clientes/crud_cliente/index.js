@@ -5,20 +5,20 @@ window.onload = function() {
 
     const mensagem1 = document.createElement('div');
     mensagem1.innerHTML = "Carregando Tabela..."
-    loadingMessage.append(mensagem1)
+    loadingMessage.appendChild(mensagem1)
 
     startTable();
 
     const mensagem2 = document.createElement('div');
     mensagem2.innerHTML = "Tabela Carregada!"
-    loadingMessage.append(mensagem2)
+    loadingMessage.appendChild(mensagem2)
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
 
     const completo = document.createElement('div');
     completo.innerHTML = "Aguarde..."
-    loadingMessage.append(mensagem2)
+    loadingMessage.appendChild(completo)
 
     setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
