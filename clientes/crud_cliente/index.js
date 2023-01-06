@@ -1,10 +1,16 @@
 
 window.onload = function() {
 
+    var loadingMessage = document.getElementById("loading-message");
+
    startTable();
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
+
+     setTimeout(function() {
+        loadingMessage.parentNode.removeChild(loadingMessage);
+    }, 1000);
 
 };
 

@@ -220,3 +220,8 @@ header{
     align-items: flex-start;
 
 }
+#loading-message{
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+}
