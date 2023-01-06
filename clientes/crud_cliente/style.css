@@ -15,6 +15,7 @@ body{
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-top: 5vh;
     width: 100vw;
     background-color: black;
