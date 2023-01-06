@@ -8,6 +8,8 @@ window.onload = function() {
 
 };
 
+// Tabela
+
 let rowsPerPage = 20;
 let currentPage = 1;
 let tableData;
@@ -64,5 +66,54 @@ async function startTable(){
     await fetch("./../data_operations/obterClientes.php").then(Response => Response.json()).then(data => tableData = data)
 
     renderTable()
+
+}
+
+// Formulário
+
+let flagSelec = 0
+let eventoAnt = 0
+
+function obterDadosLinhaTabela(event){
+
+    var tds = event.path[1].getElementsByTagName("td");
+    var inputs = document.getElementsByClassName("formularioCliente")[0].getElementsByTagName("input");
+
+    for (var i = 0; i < tds.length; i++) {
+
+        var td = tds[i];
+        var conteudo = td.textContent.trim();
+
+        inputs[i].value = conteudo;
+
+    }
+
+
+    if (flagSelec == 0){
+
+        event.path[1].style.background = "yellow";
+
+        flagSelec = 1
+        eventoAnt = event
+
+    }
+    else{
+        
+        eventoAnt.path[1].style.background = "rgb(235, 235, 255)";
+
+        flagSelec = 1
+        eventoAnt = event
+        event.path[1].style.background = "yellow";
+
+    }
+
+}
+
+function resetForm(){
+
+    eventoAnt.path[1].style.background = "rgb(235, 235, 255)";
+   
+    flagSelec = 0
+    eventoAnt = 0
 
 }
