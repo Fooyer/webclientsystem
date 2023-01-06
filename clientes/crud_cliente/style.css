@@ -8,13 +8,15 @@
 body{
 
     background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
 
 }
 
 .tabelaCliente{
 
     margin-top: 5vh;
-    width: 100vw;
+    width: 80vw;
     background-color: black;
     height: 60vh;
 
