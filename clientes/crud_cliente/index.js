@@ -44,6 +44,7 @@ function renderTable() {
 
             const tr = document.createElement('tr');
             tr.id = "linhaTabelaVazia"
+            tr.innerHTML = " "
 
         } else {
             const tr = document.createElement('tr');
