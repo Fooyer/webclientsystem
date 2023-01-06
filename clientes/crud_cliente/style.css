@@ -73,6 +73,7 @@ header{
 .tabelaCliente tr{
 
     background-color: rgb(235, 235, 255);
+    height: 1vh;
 
 }
 
