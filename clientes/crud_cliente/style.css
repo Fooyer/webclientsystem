@@ -46,20 +46,14 @@ header{
 
 }
 
-.tabelaCliente th,td{
-
-    border: 1px solid black;
-    border-spacing: inherit;
-
-}
-
 .tabelaCliente{
 
     margin-top: 5vh;
     margin-left: 8vw;
     width: 70vw;
-    background-color: #cc1b0f;
+    background-color: black;
     height: 60vh;
+    border: 1px solid black;
 
 }
 
