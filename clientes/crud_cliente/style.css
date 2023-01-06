@@ -248,6 +248,6 @@ header{
 
 @keyframes is-rotating {
     to {
-      transform: rotate(0.5turn);
+      transform: rotate(2turn);
     }
   }
