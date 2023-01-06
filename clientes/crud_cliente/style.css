@@ -59,7 +59,7 @@ header{
     margin-left: 8vw;
     width: 70vw;
     background-color: #cc1b0f;
-    height: 80vh;
+    height: 60vh;
 
 }
 
@@ -67,14 +67,12 @@ header{
 
     font-size: medium;
     padding: 5px;
-    height: 2vh !important;
 
 }
 
 .tabelaCliente tr{
 
     background-color: rgb(235, 235, 255);
-    height: 2vh !important;
 
 }
 
@@ -96,6 +94,13 @@ header{
     background: rgb(201, 201, 201) !important;
 
 }
+#linhaTabelaVazia{
+
+    background: rgb(201, 201, 201) !important;
+    border: none;
+
+}
+
 
 .formularioCliente{
 

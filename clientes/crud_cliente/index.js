@@ -40,19 +40,24 @@ function renderTable() {
 
     for (let i = startIndex; i < endIndex; i++) {
         const row = tableData[i];
-        if (!row) break;
+        if (!row){
 
-        const tr = document.createElement('tr');
+            const tr = document.createElement('tr');
+            tr.id = "linhaTabelaVazia"
 
-        tr.id = "linhaTabela"
+        } else {
+            const tr = document.createElement('tr');
 
-        tr.addEventListener('click', obterDadosLinhaTabela);
+            tr.id = "linhaTabela"
 
-        tr.innerHTML = `
-        <td>${row.id}</td>
-        <td>${row.nome}</td>
-        <td>${row.email}</td>
-        <td>${row.telefone}</td>`
+            tr.addEventListener('click', obterDadosLinhaTabela);
+
+            tr.innerHTML = `
+            <td>${row.id}</td>
+            <td>${row.nome}</td>
+            <td>${row.email}</td>
+            <td>${row.telefone}</td>`
+        }
 
         table.appendChild(tr)
     }
