@@ -13,6 +13,8 @@ body{
 
 .tabelaCliente{
 
+    display: flex;
+    justify-content: center;
     margin-top: 5vh;
     margin-left: 8vw;
     width: 70vw;
@@ -80,9 +82,7 @@ body{
     justify-content: center;
     margin-top: 2vh;
     width: 100vw;
-    height: 45vh;
-    display: flex;
-    margin-top: 5vh;
+    height: 35vh;
 
 }
 
