@@ -79,6 +79,7 @@ body{
 
     display: flex;
     justify-content: center;
+    flex-direction: row;
     margin-top: 2vh;
     width: 100vw;
     height: 30vh;
