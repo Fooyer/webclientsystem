@@ -3,12 +3,12 @@ window.onload = function() {
 
     var loadingMessage = document.getElementById("loading-message");
 
-   startTable();
+    startTable();
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
 
-     setTimeout(function() {
+    setTimeout(function() {
         loadingMessage.parentNode.removeChild(loadingMessage);
         loadingMessage.style.opacity = 0;
     }, 5000);
