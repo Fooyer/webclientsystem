@@ -12,6 +12,7 @@ window.onload = async function() {
 
     document.getElementById('prev-page').addEventListener('click', prevPage);
     document.getElementById('next-page').addEventListener('click', nextPage);
+    document.getElementById('botaoCancelar').addEventListener('click', resetForm);
 
     mensagem.innerHTML = "Aguarde..."
 
