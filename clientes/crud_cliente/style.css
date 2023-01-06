@@ -232,6 +232,7 @@ header{
     display: flex;
     justify-content: center;
     transform: scale(5);
+    justify-self: 10px;
 
 }
 
