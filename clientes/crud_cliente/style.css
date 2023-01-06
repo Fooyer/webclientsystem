@@ -176,13 +176,6 @@ body{
 
 }
 
-.crudCliente{
-
-    display: flex;
-    align-items: flex-start;
-
-}
-
 #loading-message{
 
     position: fixed;
