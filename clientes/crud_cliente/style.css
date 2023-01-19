@@ -57,6 +57,7 @@ body{
 
     display: flex;
     justify-content: center;
+    flex-direction: row;
     width: 50%;
     height: 100%;
     background-color: rgb(235, 235, 255);
@@ -104,8 +105,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 25%;
-    height: 60%;
+    width: 100%;
 
 }
 
@@ -114,28 +114,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-
-}
-
-#cambut{
-
-    display: flex;
-    justify-content: center;
     flex-direction: column;
+    width: 100%;
 
 }
 
 #camposDados input{
 
     padding: 5px;
-    margin-left: 50px;
-
-}
-
-#camposDados label{
-
-    margin-left: 50px;
 
 }
 
@@ -146,13 +132,11 @@ body{
     width: 15vw;
     display: flex;
     justify-content: center;
-    margin-left: 50%;
 
 }
 
 #cambut button{
 
-    margin-top: 30%;
     height: 3vh;
     width: 5vw;
     border-radius: 3px;
